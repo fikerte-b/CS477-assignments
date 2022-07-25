@@ -5,7 +5,9 @@
 const dns = require("dns");
 
 dns.resolve4("www.miu.edu", true, (err, data) => {
+    // we can do lookup too
   if (err) {
+    //throw new Error('Whoops')
     console.log(err);
   } else {
     console.log(data);

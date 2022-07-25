@@ -12,7 +12,7 @@
  //using stream
  server
    .on("request", (req, res) => {
-     const src = fs.ReadStream("bigImg.jpg");
+     const src = fs.ReadStream("nature.jpg");
 //fs.ReadStream()
      src.pipe(res);
    })
@@ -21,7 +21,7 @@
 //using readFile
  http
    .createServer((req, res) => {
-     fs.readFile("bigImg.jpg", (err, data) => {
+     fs.readFile("nature.jpg", (err, data) => {
        if (err) throw err;
        res.end(data);
      });
